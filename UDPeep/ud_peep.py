@@ -14,7 +14,7 @@ def main():
     instances_list = get_instances_list(client)
     user_data_list = get_user_data(client, instances_list)
     results = find_secrets(user_data_list)
-    if arguments.Output:
+    if arguments.Output and len(results) > 0:
         logger.info("[!] Writing output to CSV...")
         write_to_csv(results, arguments.Output)
 
