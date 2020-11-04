@@ -74,7 +74,7 @@ def find_secrets(user_data_list: List[dict]) -> List[dict]:
         if ud:
             ud = base64.b64decode(ud).decode()
             for k, v in REGEX_LIST.items():
-                found = re.findall(v, x)
+                found = re.findall(v, ud)
                 if len(found) > 0:
                     for r in found:
                         logger.info(
