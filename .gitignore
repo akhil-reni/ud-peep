@@ -1,0 +1,9 @@
+venv/*
+dist/*
+build/*
+*.egg-info
+*.env
+.idea/*
+*.pyc
+.dsstore
+.DS_Store
